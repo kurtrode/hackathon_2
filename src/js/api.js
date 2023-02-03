@@ -38,7 +38,13 @@ const clearEverything = async () => {
 //clearEverything()
 
 const registerData = async () => {
-  const nameAndStuff = {};
+  const nameAndStuff = {
+    first_name: document.querySelector("input[name=fname]").value,
+    last_name: document.querySelector("input[name=lname]").value,
+    email: document.querySelector("input[name=email]").value,
+    number: document.querySelector("input[name=number]").value
+  };
+  console.log(nameAndStuff)
   const i = 7;
   const url = `https://test-api.codingbootcamp.cz/api/21c8af4d/events/${i}/registrations`;
   const myRegister = await fetch(url, {
@@ -62,10 +68,19 @@ const eventDetails = async () => {
   console.log(eventJSON);
 };
 eventDetails();
+const listRegistrations = async ()=>{
+  const getReg = await fetch(
+    "https://test-api.codingbootcamp.cz/api/21c8af4d/events/registrations"
+  );
+  const jsonedReg = await getReg.json();
+  console.log(jsonedReg);
+
+}
 
 console.log(document.querySelector("button.register"));
 
 document.querySelector("button.register").addEventListener("click", (e) => {
   e.preventDefault();
   registerData();
+  eventDetails();
 });
