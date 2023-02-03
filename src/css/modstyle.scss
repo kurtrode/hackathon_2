@@ -22,9 +22,11 @@ body {
   flex-direction: column;
 }
 
-.modular-content-desc {
+.modular-content {
   background-color: black;
   height: 250px;
+  display: flex;
+  justify-content: flex-end;
 }
 fieldset {
   height: 250px;
@@ -33,11 +35,10 @@ fieldset {
 }
 
 .modular-close {
-  display: flex;
   background-color: grey;
   height: 20px;
   width: 20px;
-  justify-content: center;
+  text-align: center;
 }
 input[type="checkbox"] {
   display: flex;
@@ -49,4 +50,18 @@ label[for="checkage"] {
 button.register {
   width: 100px;
   height: 100px;
+}
+section.check {
+  display: flex;
+  align-self: flex-start;
+  flex-direction: row-reverse;
+}
+
+.desc {
+  display: flex;
+  background-color: aqua;
+  height: 100px;
+  width: 300px; //random
+  align-self: center;
+  margin-inline: 150px; // can be updated
 }
