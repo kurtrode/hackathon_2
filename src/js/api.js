@@ -30,7 +30,20 @@ const clearEverything=async()=>{
 
 const registerData = async() =>{
     const nameAndStuff ={}
-    const myRegister = await fetch(('https://test-api.codingbootcamp.cz/api/21c8af4d/events/EVENT_ID/registrations'),{"method":"POST","headers":{'Content-type': 'application/json'},"body":json.stringify(nameAndStuff)})
+    const i = 7
+    const url = `https://test-api.codingbootcamp.cz/api/21c8af4d/events/${i}/registrations`
+    const myRegister = await fetch((url),{"method":"POST","headers":{'Content-type': 'application/json'},"body":json.stringify(nameAndStuff)})
     const successful = await myRegister.json()
     console.log(successful)
 }
+//registerData()
+const eventDetails = async()=>{
+    const detailFetch = await fetch('https://test-api.codingbootcamp.cz/api/21c8af4d/events')
+    const detailFetchjson = await detailFetch.json()
+    const i =7
+    const url = `https://test-api.codingbootcamp.cz/api/21c8af4d/events/${i}`
+    const eventFetch = await fetch(url)
+    const eventJSON = await eventFetch.json()
+    console.log(eventJSON)
+}
+eventDetails()
