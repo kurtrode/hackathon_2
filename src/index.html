@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
+
 <body>
   <header>
     <nav>
@@ -19,11 +20,60 @@
     <h1>Events in Prague</h1>
   </header>
   <main>
-    <div class="bigbox">Event Name</div>
-    <div class="smallbox">Event Name</div>
-    <div class="smallbox">Event Name</div>
-    <div class="smallbox">Event Name</div>
+    <div class="bigbox">Hackathon 2</div>
+    <button id="descriptionBtn">Event description</button>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Hackathon 2</h2>
+        <p>Make your Event registration page</p>
+        <p>Hackathon schedule:</p>
+        <ul>
+          <li>9:00 - Start</li>
+          <li>10:00 - BLABLABLA</li>
+          <li>12:30 - Lunch</li>
+          <li>2:00 - Coffee break</li>
+          <li>5:00 PM - End of Hackathon</li>
+        </ul>
+        <form id="form" action="/">
+          <fieldset>
+            <label for="fname">First name</label>
+            <input type="text" name="fname" id="fname" required> <br>
+
+            <label for="lname">Last name</label>
+            <input type="text" name="lname" id="lname" required> <br>
+
+
+            <label for="email">E-mail</label>
+
+            <input type="email" name="email" id="email" value="@" required> <br>
+
+
+            <label for="number">Telephone number</label>
+            <input type="tel" name="number" id="number" required> <br>
+
+
+            <section class="check">
+              <label for="checkage">I'm old enough to attend this event</label>
+              <input type="checkbox" name="checkage" id="checkage
+                                        " required>
+            </section>
+
+            <button type="submit" class="register">
+              Register
+
+            </button>
+          </fieldset>
+        </form>
+
+      </div>
+    </div>
+    <div class="small-box">Event Name</div>
+    <div class="small-box">Event Name</div>
+    <div class="small-box">Event Name</div>
   </main>
+  <script src="js/registrbtn.js"></script>
+  <script src="js/api.js"></script>
 </body>
 
 </html>
