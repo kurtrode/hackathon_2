@@ -1,18 +1,19 @@
 * {
   box-sizing: border-box;
-  color: black;
+  color: red;
 }
 
 body {
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 1);
   box-sizing: inherit;
 }
 
 .modular {
-  background-color: white;
   display: flex;
-  scale: inherit;
+  justify-content: center;
+
+  width: 45vw;
 }
